@@ -114,6 +114,34 @@ $( document ).ready(function() {
 
   RunningWindow.joystick.on('change', function(e) {
 
+    console.log(this.angle);
+    if (this.distance > 40 ) {
+      if(this.angle > 35 && this.angle <= 75) {
+        console.log("forward right");
+      }
+      else if (this.angle > 75 && this.angle <= 115) {
+        console.log("right");
+      }
+      else if (this.angle > 115 && this.angle <= 155) {
+        console.log("backwards right");
+      }
+      else if (this.angle > 155 && this.angle <= 195) {
+        console.log("backwards");
+      }
+      else if (this.angle > 195 && this.angle <= 245) {
+        console.log("backwards left");
+      }
+      else if (this.angle > 245 && this.angle <= 285) {
+        console.log("left");
+      }
+      else if (this.angle > 285 && this.angle <= 325) {
+        console.log("forward left");
+      }
+      else if (this.angle > 325 || this.angle <= 35) {
+        console.log("forward");
+      }
+    }
+
     if ( this.distance > 40 && this.angle > 40 && this.angle < 140 ) {
       sendMessage( 'control', 'right_down' );
       past_directions.right = true;

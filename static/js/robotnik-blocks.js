@@ -47,9 +47,13 @@ Blockly.Blocks['while_button'] = {
           ['red', 'red'], 
           ['green', 'green'], 
           ['up', 'up'], 
+          ['up right', 'up_right'], 
+          ['right', 'right'],
+          ['down right', 'down_right'], 
           ['down', 'down'], 
+          ['down left', 'down_left'], 
           ['left', 'left'], 
-          ['right', 'right']
+          ['up left', 'up_left'] 
         ]), 'BUTTON')
         .appendField('button is pressed');
     this.appendStatementInput('DO');
