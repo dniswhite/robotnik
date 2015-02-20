@@ -8,15 +8,5 @@ var led = new five.Led(13),
 	right = new five.Servo({ pin: 11, type: 'continuous' }).stop(),
 	sensor = new five.Sensor('A0')
 
-button.on('right', function() {
-  left.cw(.6);
-  right.ccw(.1);
-
-})
-button.off('right', function() {
-  left.stop();
-  right.stop();
-
-})
 
 })
